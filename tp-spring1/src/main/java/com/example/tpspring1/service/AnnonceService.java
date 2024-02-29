@@ -1,7 +1,7 @@
 package com.example.tpspring1.service;
 
 import com.example.tpspring1.dao.AnnonceDAO;
-import com.example.tpspring1.entity.AnnonceEntity;
+import com.example.tpspring1.model.entity.AnnonceEntity;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

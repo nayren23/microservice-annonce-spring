@@ -1,6 +1,6 @@
 package com.example.tpspring1.controller;
 
-import com.example.tpspring1.entity.AnnonceEntity;
+import com.example.tpspring1.model.entity.AnnonceEntity;
 import com.example.tpspring1.service.AnnonceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

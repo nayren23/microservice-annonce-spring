@@ -1,4 +1,4 @@
-package com.example.tpspring1.entity;
+package com.example.tpspring1.model.entity;
 
 import jakarta.persistence.*;
 
