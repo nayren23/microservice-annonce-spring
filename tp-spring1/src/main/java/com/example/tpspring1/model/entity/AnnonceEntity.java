@@ -26,14 +26,6 @@ public class AnnonceEntity {
     public AnnonceEntity() {
     }
 
-    public AnnonceEntity(Long id, String title, String description, String address, String mail) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.address = address;
-        this.mail = mail;
-    }
-
     public AnnonceEntity(String title, String description, String address, String mail) {
         this.title = title;
         this.description = description;

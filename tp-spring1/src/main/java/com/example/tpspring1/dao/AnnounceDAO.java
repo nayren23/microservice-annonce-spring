@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AnnonceDAO extends JpaRepository<AnnonceEntity, Long> {
+public interface AnnounceDAO extends JpaRepository<AnnonceEntity, Long> {
     List<AnnonceEntity> findAll();
-
 }
