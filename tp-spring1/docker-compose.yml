@@ -12,18 +12,18 @@ services:
       - "4200:4200"
     depends_on:
       - microservice_business
-     # - microservice_service
+      - microservice_service
       - microservice_auth
   
   #This container is used to run the microservice service
- # microservice_service:
-   # container_name: microservice_service
-  #  image: nayren/tp-spring1
-  #  restart: always
- #   ports:
- #     - "8080:8080"
- #   depends_on:
- #     - microservice_db
+  microservice_service:
+    container_name: microservice_service
+    image: nayren/tp-spring1
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - microservice_db
 
   #This container is used to run the microservice business
   microservice_business:
@@ -33,7 +33,7 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-     # - microservice_service
+      - microservice_service
       - microservice_auth
       
 

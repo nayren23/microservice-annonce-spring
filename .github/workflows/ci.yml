@@ -20,6 +20,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+
       - name: Set up QEMU #For emulation of arm64 on amd64
         uses: docker/setup-qemu-action@v3
 
