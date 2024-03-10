@@ -1,0 +1,5 @@
+com\example\tpspring1\TpSpring1Application.class
+com\example\tpspring1\service\AnnounceService.class
+com\example\tpspring1\controller\AnnounceController.class
+com\example\tpspring1\dao\AnnounceDAO.class
+com\example\tpspring1\model\entity\AnnonceEntity.class
