@@ -27,7 +27,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file ./tp-spring1/pom.xml
 
       - name: Set up QEMU #For emulation of arm64 on amd64
         uses: docker/setup-qemu-action@v3
