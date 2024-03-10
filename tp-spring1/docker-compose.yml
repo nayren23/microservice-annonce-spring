@@ -3,6 +3,49 @@ version: '3.8'
 
 services:
 
+  #This container is used to run the microservice front
+  microservice_front:
+    container_name: microservice_front
+    image: nayren/microservice-front
+    restart: always
+    ports:
+      - "4200:4200"
+    depends_on:
+      - microservice_business
+      - microservice_service
+      - microservice_auth
+  
+  #This container is used to run the microservice service
+  microservice_service:
+    container_name: microservice_service
+    image: nayren/tp-spring1
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - microservice_db
+
+  #This container is used to run the microservice business
+  microservice_business:
+    container_name: microservice_business
+    image: nayren/microservice-metier
+    restart: always
+    ports:
+      - "8081:8081"
+    depends_on:
+      - microservice_service
+      - microservice_auth
+      
+
+  #This container is used to run the microservice auth
+  microservice_auth:
+    container_name: microservice_auth
+    image: nayren/spring-auth
+    restart: always
+    ports:
+      - "8082:8082"
+
+
   #This container is used to store the data
   microservice_db:
     container_name: microservice_db
@@ -34,4 +77,4 @@ services:
 
 
 x-environment:
-  COMPOSE_PROJECT_NAME: microservice_nayren
+  COMPOSE_PROJECT_NAME: tp-maintenance-applicative-nayren
